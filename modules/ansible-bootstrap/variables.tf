@@ -73,6 +73,7 @@ variable "ansible_tar_ball" {
 
 variable "gcp_sa_keys" {
   type        = any
+  sensitive   = true
   description = "GCP Service Account Keys"
 }
 

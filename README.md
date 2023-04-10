@@ -84,8 +84,8 @@ vlan_id = "Not applicable for Google cloud"
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cloud"></a> [cloud](#input\_cloud) | GCP (Google Cloud Platform), EQM (Equinx Metal), or PNAP (Phoenix Nap) to deploy the 'Nodes' | `string` | `"GCP"` | no |
-| <a name="input_organization_id"></a> [organization\_id](#input\_organization\_id) | Organization ID (GCP or EQM) | `string` | `"null"` | no |
+| <a name="input_cloud"></a> [cloud](#input\_cloud) | GCP (Google Cloud Platform) or PNAP (Phoenix Nap) to deploy the 'Nodes' | `string` | `"GCP"` | no |
+| <a name="input_organization_id"></a> [organization\_id](#input\_organization\_id) | Organization ID (GCP) | `string` | `"null"` | no |
 | <a name="input_operating_system"></a> [operating\_system](#input\_operating\_system) | The Operating system to deploy (Only ubuntu\_20\_04 has been tested) | `string` | `"ubuntu_20_04"` | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | The ABM cluster name | `string` | `"abm-cluster"` | no |
 | <a name="input_create_project"></a> [create\_project](#input\_create\_project) | Create a new Project if this is 'true'. Else use provided 'project\_id' (Unsuported for PNAP) | `bool` | `false` | no |
@@ -97,6 +97,7 @@ vlan_id = "Not applicable for Google cloud"
 | <a name="input_create_network"></a> [create\_network](#input\_create\_network) | Create a new network if this is 'true'. Else use provided 'p*\_network\_id' | `bool` | `true` | no |
 | <a name="input_public_network_id"></a> [public\_network\_id](#input\_public\_network\_id) | If create\_network=false, this will be the public network used for the deployment. (Only supported in PNAP today) | `string` | `"null"` | no |
 | <a name="input_private_network_id"></a> [private\_network\_id](#input\_private\_network\_id) | If create\_network=false, this will be the private network used for the deployment. (Only supported in PNAP today) | `string` | `"null"` | no |
+| <a name="input_load_balancer_ips"></a> [load\_balancer\_ips](#input\_load\_balancer\_ips) | The IP pool for load balancers created | `string` | n/a | yes |
 | <a name="input_ansible_playbook_version"></a> [ansible\_playbook\_version](#input\_ansible\_playbook\_version) | The version of the ansible playbook to install | `string` | `"v1.0.3"` | no |
 | <a name="input_ansible_url"></a> [ansible\_url](#input\_ansible\_url) | URL of the ansible code | `string` | `"https://github.com/GCPartner/ansible-gcpartner-anthos-baremetal/archive/refs/tags/v1.0.3.tar.gz"` | no |
 | <a name="input_ansible_tar_ball"></a> [ansible\_tar\_ball](#input\_ansible\_tar\_ball) | Tarball of the ansible code | `string` | `"v1.0.3.tar.gz"` | no |
@@ -110,12 +111,6 @@ vlan_id = "Not applicable for Google cloud"
 | <a name="input_gcp_worker_instance_type"></a> [gcp\_worker\_instance\_type](#input\_gcp\_worker\_instance\_type) | The GCE instance type for worker nodes | `string` | `"e2-standard-8"` | no |
 | <a name="input_gcp_zone"></a> [gcp\_zone](#input\_gcp\_zone) | The GCE zone where the instances should reside | `string` | `"us-central1-a"` | no |
 | <a name="input_gcp_billing_account"></a> [gcp\_billing\_account](#input\_gcp\_billing\_account) | The GCP billing account to use for the project | `string` | `"null"` | no |
-| <a name="input_metal_auth_token"></a> [metal\_auth\_token](#input\_metal\_auth\_token) | Equinix Metal API Key | `string` | `"null"` | no |
-| <a name="input_metal_project_id"></a> [metal\_project\_id](#input\_metal\_project\_id) | The project ID to use for EQM | `string` | `"null"` | no |
-| <a name="input_metal_facility"></a> [metal\_facility](#input\_metal\_facility) | Equinix Metal Facility to deploy into | `string` | `"ny5"` | no |
-| <a name="input_metal_cp_plan"></a> [metal\_cp\_plan](#input\_metal\_cp\_plan) | Equinix Metal device type to deploy for cp nodes | `string` | `"c3.small.x86"` | no |
-| <a name="input_metal_worker_plan"></a> [metal\_worker\_plan](#input\_metal\_worker\_plan) | Equinix Metal device type to deploy for worker nodes | `string` | `"c3.small.x86"` | no |
-| <a name="input_metal_billing_cycle"></a> [metal\_billing\_cycle](#input\_metal\_billing\_cycle) | How the node will be billed (Not usually changed) | `string` | `"hourly"` | no |
 
 ## Outputs
 

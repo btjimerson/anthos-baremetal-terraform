@@ -55,7 +55,7 @@ resource "null_resource" "install_ansible" {
 }
 
 resource "null_resource" "write_gcp_sa_keys" {
-  for_each = var.gcp_sa_keys
+  for_each = nonsensitive(var.gcp_sa_keys)
 
   connection {
     type        = "ssh"

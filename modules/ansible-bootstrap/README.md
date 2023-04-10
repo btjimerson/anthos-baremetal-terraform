@@ -14,8 +14,9 @@
 | <a name="input_operating_system"></a> [operating\_system](#input\_operating\_system) | The Operating system to deploy (Only ubuntu\_20\_04 has been tested) | `string` | n/a | yes |
 | <a name="input_username"></a> [username](#input\_username) | The username used to ssh to hosts | `string` | n/a | yes |
 | <a name="input_ansible_playbook_version"></a> [ansible\_playbook\_version](#input\_ansible\_playbook\_version) | The version of the ansible playbook to install | `string` | n/a | yes |
+| <a name="input_load_balancer_ips"></a> [load\_balancer\_ips](#input\_load\_balancer\_ips) | The IP pool for load balancers created | `string` | n/a | yes |
 | <a name="input_ansible_url"></a> [ansible\_url](#input\_ansible\_url) | URL of the ansible code | `string` | n/a | yes |
 | <a name="input_ansible_tar_ball"></a> [ansible\_tar\_ball](#input\_ansible\_tar\_ball) | Tarball of the ansible code | `string` | n/a | yes |
 | <a name="input_gcp_sa_keys"></a> [gcp\_sa\_keys](#input\_gcp\_sa\_keys) | GCP Service Account Keys | `any` | n/a | yes |
-| <a name="input_gcp_project_id"></a> [gcp\_project\_id](#input\_gcp\_project\_id) | The project ID to use (Same variable for GCP and EQM) | `string` | n/a | yes |
+| <a name="input_gcp_project_id"></a> [gcp\_project\_id](#input\_gcp\_project\_id) | The project ID to use | `string` | n/a | yes |
 <!-- END_TF_DOCS -->

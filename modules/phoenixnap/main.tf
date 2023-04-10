@@ -14,7 +14,7 @@ locals {
 resource "pnap_ip_block" "new_ip_block" {
   count           = var.create_network ? 1 : 0
   location        = var.pnap_location
-  cidr_block_size = "/29"
+  cidr_block_size = "/28"
   description     = "IP block for public hosts and k8s services"
   lifecycle {
     ignore_changes = all
