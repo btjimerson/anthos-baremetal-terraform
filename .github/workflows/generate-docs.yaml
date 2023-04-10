@@ -1,0 +1,22 @@
+name: Generate terraform docs
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  docs:
+    name: Generate Terraform docs
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'terraform-docs') }}
+    steps:
+    - name: Checkout latest commit
+      uses: actions/checkout@v3
+    - name: Render terraform docs and push changes back
+      uses: terraform-docs/gh-actions@main
+      with:
+        working-dir: .
+        output-file: "README.md"
+        output-format: "markdown table"
+        output-method: "inject"
+        git-push: "true"
