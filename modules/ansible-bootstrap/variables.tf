@@ -56,11 +56,6 @@ variable "ansible_playbook_version" {
   description = "The version of the ansible playbook to install"
 }
 
-variable "load_balancer_ips" {
-  type        = string
-  description = "The IP pool for load balancers created"
-}
-
 variable "ansible_url" {
   type        = string
   description = "URL of the ansible code"

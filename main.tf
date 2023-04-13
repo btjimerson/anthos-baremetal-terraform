@@ -135,7 +135,6 @@ module "ansible_bootstrap" {
   cp_node_count            = local.cp_node_count
   worker_node_count        = var.worker_node_count
   bastion_ip               = local.bastion_ip
-  load_balancer_ips        = var.load_balancer_ips
   cp_ips                   = local.cp_ips
   worker_ips               = local.worker_ips
   server_subnet            = var.network_type == "private" ? local.priv_cidr : local.pub_cidr

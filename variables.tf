@@ -76,11 +76,6 @@ variable "private_network_id" {
   description = "If create_network=false, this will be the private network used for the deployment. (Only supported in PNAP today)"
 }
 
-variable "load_balancer_ips" {
-  type        = string
-  description = "The IP pool for load balancers created"
-}
-
 # Ansible Vars
 variable "ansible_playbook_version" {
   type        = string

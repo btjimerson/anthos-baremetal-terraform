@@ -112,7 +112,6 @@ resource "null_resource" "write_ansible_inventory_header" {
     inline = [
       "echo '[all:vars]' > $HOME/bootstrap/${local.git_repo_name}/inventory",
       "echo 'private_subnet=${var.server_subnet}' >> $HOME/bootstrap/${local.git_repo_name}/inventory",
-      "echo 'load_balancer_ips=${var.load_balancer_ips}' >> $HOME/bootstrap/${local.git_repo_name}/inventory",
       "echo 'cluster_name=${var.cluster_name}' >> $HOME/bootstrap/${local.git_repo_name}/inventory",
       "echo 'username=${var.username}' >> $HOME/bootstrap/${local.git_repo_name}/inventory",
       "echo 'cp_node_count=${var.cp_node_count}' >> $HOME/bootstrap/${local.git_repo_name}/inventory",
