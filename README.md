@@ -97,7 +97,6 @@ vlan_id = "Not applicable for Google cloud"
 | <a name="input_create_network"></a> [create\_network](#input\_create\_network) | Create a new network if this is 'true'. Else use provided 'p*\_network\_id' | `bool` | `true` | no |
 | <a name="input_public_network_id"></a> [public\_network\_id](#input\_public\_network\_id) | If create\_network=false, this will be the public network used for the deployment. (Only supported in PNAP today) | `string` | `"null"` | no |
 | <a name="input_private_network_id"></a> [private\_network\_id](#input\_private\_network\_id) | If create\_network=false, this will be the private network used for the deployment. (Only supported in PNAP today) | `string` | `"null"` | no |
-| <a name="input_load_balancer_ips"></a> [load\_balancer\_ips](#input\_load\_balancer\_ips) | The IP pool for load balancers created | `string` | n/a | yes |
 | <a name="input_ansible_playbook_version"></a> [ansible\_playbook\_version](#input\_ansible\_playbook\_version) | The version of the ansible playbook to install | `string` | `"v1.0.3"` | no |
 | <a name="input_ansible_url"></a> [ansible\_url](#input\_ansible\_url) | URL of the ansible code | `string` | `"https://github.com/GCPartner/ansible-gcpartner-anthos-baremetal/archive/refs/tags/v1.0.3.tar.gz"` | no |
 | <a name="input_ansible_tar_ball"></a> [ansible\_tar\_ball](#input\_ansible\_tar\_ball) | Tarball of the ansible code | `string` | `"v1.0.3.tar.gz"` | no |
